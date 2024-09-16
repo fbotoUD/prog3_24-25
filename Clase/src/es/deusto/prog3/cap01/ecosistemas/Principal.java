@@ -278,7 +278,7 @@ public class Principal {
 	}
 
 	private static void cargarOrganismosCSV(ArrayList<Organismo> organismos) {
-		File f = new File("organismos.csv");
+		File f = new File("src/es/deusto/prog3/cap01/ecosistemas/organismos.csv");
 		try {
 			Scanner sc = new Scanner(f);
 			
