@@ -4,7 +4,7 @@ import java.awt.BorderLayout;
 
 import javax.swing.*;
 
-public class VentanaSencilla1 {
+public class VentanaSencilla {
 
 	/**
 	 *   

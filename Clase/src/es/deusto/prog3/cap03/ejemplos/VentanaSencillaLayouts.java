@@ -5,23 +5,22 @@ import java.awt.GridLayout;
 
 import javax.swing.*;
 
-public class VentanaSencilla2 {
+public class VentanaSencillaLayouts extends JFrame{
 
 	/**
 	 *   
 	 * Usando BorderLayout y GridLayout para las tres partes
 	 */
-
-    public static void main(String[] args) {
-    	JFrame ventana = new JFrame();
-    	// Configuración de la ventana
-    	ventana.setTitle("Envío de Correo Electrónico");
-    	ventana.setSize(400, 200);
-    	ventana.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+	
+	public VentanaSencillaLayouts() {
+		// Configuración de la ventana
+    	setTitle("Envío de Correo Electrónico");
+    	setSize(400, 200);
+    	setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
 
     	// Crear el panel
         JPanel panel = new JPanel();
-        ventana.add(panel); // Añadir el panel a la ventana
+        add(panel); // Añadir el panel a la ventana
         panel.setLayout(new BorderLayout());
         
 
@@ -55,6 +54,11 @@ public class VentanaSencilla2 {
         panel.add(panelMail,BorderLayout.NORTH);
         panel.add(panelTexto,BorderLayout.CENTER);
         panel.add(panelBotones,BorderLayout.SOUTH);
+	}
+
+    public static void main(String[] args) {
+    	VentanaSencillaLayouts ventana = new VentanaSencillaLayouts();
+    	
         
         ventana.setVisible(true);
     }
