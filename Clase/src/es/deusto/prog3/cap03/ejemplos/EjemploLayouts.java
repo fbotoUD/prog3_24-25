@@ -35,8 +35,11 @@ public class EjemploLayouts extends JFrame {
         // Crear un panel principal con un GridLayout para organizar los otros paneles
         // El panel tiene 2 filas y 2 columnas, con 10 píxeles de separación horizontal y vertical
         JPanel mainPanel = new JPanel(new GridLayout(2, 2, 10, 10));
-
-        // Panel con FlowLayout
+        
+       
+        /*
+         * Panel con FlowLayout
+         */
         JPanel flowLayoutPanel = new JPanel(new FlowLayout());
         // Añadir un borde con título al panel
         flowLayoutPanel.setBorder(BorderFactory.createTitledBorder("FlowLayout"));
@@ -45,7 +48,9 @@ public class EjemploLayouts extends JFrame {
 			flowLayoutPanel.add(new JButton("Botón " + (i + 1)));
 		}
 
-        // Panel con BorderLayout
+        /*
+         *  Panel con BorderLayout
+         */
         JPanel borderLayoutPanel = new JPanel(new BorderLayout());
         // Añadir un borde con título al panel
         borderLayoutPanel.setBorder(BorderFactory.createTitledBorder("BorderLayout"));
@@ -56,7 +61,9 @@ public class EjemploLayouts extends JFrame {
         borderLayoutPanel.add(new JButton("Oeste"), BorderLayout.WEST);
         borderLayoutPanel.add(new JButton("Centro"), BorderLayout.CENTER);
 
-        // Panel con GridLayout (2 filas, 2 columnas)
+        /*
+         *  Panel con GridLayout (2 filas, 2 columnas)
+         */
         JPanel gridLayoutPanel = new JPanel(new GridLayout(2, 2, 5, 5));
         // Añadir un borde con título al panel
         gridLayoutPanel.setBorder(BorderFactory.createTitledBorder("GridLayout"));
@@ -65,7 +72,9 @@ public class EjemploLayouts extends JFrame {
 			gridLayoutPanel.add(new JButton("Botón " + (i + 1)));
 		}
         
-        // Panel con BoxLayout (Eje vertical)
+        /*
+         * Panel con BoxLayout (Eje vertical)
+         */
         JPanel boxLayoutPanel = new JPanel();
         // Se define el BoxLayout con orientación vertical
         boxLayoutPanel.setLayout(new BoxLayout(boxLayoutPanel, BoxLayout.Y_AXIS));
@@ -89,11 +98,8 @@ public class EjemploLayouts extends JFrame {
 	}
 
     public static void main(String[] args) {
-        // Crear la ventana en el hilo de eventos de Swing
-    	SwingUtilities.invokeLater(() -> {
-    		// Crear una instancia de EjemploLayouts y hacerla visible
-            EjemploLayouts frame = new EjemploLayouts();
-            frame.setVisible(true);
-        });
+        // Crear una instancia de EjemploLayouts y hacerla visible
+        EjemploLayouts frame = new EjemploLayouts();
+        frame.setVisible(true);
     }
 }
