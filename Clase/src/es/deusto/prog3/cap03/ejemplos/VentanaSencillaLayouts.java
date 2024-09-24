@@ -2,6 +2,8 @@ package es.deusto.prog3.cap03.ejemplos;
 
 import java.awt.BorderLayout;
 import java.awt.GridLayout;
+import java.awt.event.ActionEvent;
+import java.awt.event.ActionListener;
 
 import javax.swing.*;
 
@@ -11,6 +13,9 @@ public class VentanaSencillaLayouts extends JFrame{
 	 *   
 	 * Usando BorderLayout y GridLayout para las tres partes
 	 */
+	
+	private JTextField tfMail;
+	private JTextArea areaTexto;
 	
 	public VentanaSencillaLayouts() {
 		// Configuración de la ventana
@@ -24,22 +29,19 @@ public class VentanaSencillaLayouts extends JFrame{
         panel.setLayout(new BorderLayout());
         
 
-        // Crear etiqueta mail
-        JLabel lMail = new JLabel("Email:");
         // Crear el campo de texto
-        JTextField tfMail = new JTextField(20);
+        tfMail = new JTextField(20);
         JPanel panelMail = new JPanel();
         panelMail.setLayout(new GridLayout(2, 1));
-        panelMail.add(lMail);
+        panelMail.add(new JLabel("Email:"));
         panelMail.add(tfMail);
         
-        JLabel lMensaje = new JLabel("Escribe aquí tu mensaje:");
         // Crear el área de texto
-        JTextArea areaTexto = new JTextArea(5, 15);       
+        areaTexto = new JTextArea(5, 15);       
         JScrollPane scrollPane = new JScrollPane(areaTexto); // Añadir scroll
         JPanel panelTexto = new JPanel();
         panelTexto.setLayout(new GridLayout(2, 1));
-        panelTexto.add(lMensaje);
+        panelTexto.add(new JLabel("Escribe aquí tu mensaje:"));
         panelTexto.add(scrollPane);
 
         // Crear los botones
@@ -54,12 +56,11 @@ public class VentanaSencillaLayouts extends JFrame{
         panel.add(panelMail,BorderLayout.NORTH);
         panel.add(panelTexto,BorderLayout.CENTER);
         panel.add(panelBotones,BorderLayout.SOUTH);
+        
 	}
 
     public static void main(String[] args) {
     	VentanaSencillaLayouts ventana = new VentanaSencillaLayouts();
-    	
-        
         ventana.setVisible(true);
     }
 }
