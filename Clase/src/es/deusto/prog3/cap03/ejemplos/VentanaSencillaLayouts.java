@@ -21,6 +21,7 @@ public class VentanaSencillaLayouts extends JFrame{
 	public VentanaSencillaLayouts() {
 		// Configuración de la ventana
     	setTitle("Envío de Correo Electrónico");
+    	
     	setSize(400, 200);
     	setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
 
