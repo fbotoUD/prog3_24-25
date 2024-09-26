@@ -12,7 +12,11 @@ import java.util.Properties;
 
 public class InterfazProperties extends JFrame {
 
-    private JTextField nombreField;
+    /**
+	 * 
+	 */
+	private static final long serialVersionUID = 1L;
+	private JTextField nombreField;
     private JTextField edadField;
     private JTextField ciudadField;
 

@@ -2,13 +2,14 @@ package es.deusto.prog3.cap03.ejemplos;
 
 import java.awt.BorderLayout;
 import java.awt.GridLayout;
-import java.awt.event.ActionEvent;
-import java.awt.event.ActionListener;
-
 import javax.swing.*;
 
 public class VentanaSencillaLayouts extends JFrame{
 
+	/**
+	 * 
+	 */
+	private static final long serialVersionUID = 1L;
 	/**
 	 *   
 	 * Usando BorderLayout y GridLayout para las tres partes

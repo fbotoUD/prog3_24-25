@@ -8,6 +8,10 @@ import java.util.HashMap;
 import java.util.Objects;
 
 public class Ecosistema implements Serializable{
+	/**
+	 * 
+	 */
+	private static final long serialVersionUID = 1L;
 	protected double agua;
 	protected Clima clima;
 	protected HashMap<TipoOrganismo, ArrayList<Organismo>> organismos;

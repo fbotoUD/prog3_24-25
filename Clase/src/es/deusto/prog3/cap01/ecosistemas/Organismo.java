@@ -5,6 +5,10 @@ import java.util.ArrayList;
 import java.util.Objects;
 
 public class Organismo implements Serializable{
+	/**
+	 * 
+	 */
+	private static final long serialVersionUID = 1L;
 	protected String especie; // especie a la que pertenece.
 	protected ArrayList<Clima> climas; // climas que soporta.
 	protected double edad; // edad del organismo en años.

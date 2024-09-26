@@ -84,6 +84,12 @@ public class Principal {
 			oos.writeObject(ecosistemas);
 		} catch (IOException e) {
 			System.out.println(e);
+			try {
+				fos.close();
+			} catch (IOException e1) {
+				// TODO Auto-generated catch block
+				e1.printStackTrace();
+			}
 			return;
 		}
 		
@@ -287,7 +293,7 @@ public class Principal {
 				String[] campos = linea.split(";");
 				String tipo = campos[0];
 				String especie = campos[1];
-				double edad = Double.parseDouble(campos[2]);
+				//double edad = Double.parseDouble(campos[2]);
 				double edadMin = Double.parseDouble(campos[3]);
 				double edadMax = Double.parseDouble(campos[4]);
 				int reproduccion = Integer.parseInt(campos[5]);

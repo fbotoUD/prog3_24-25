@@ -1,7 +1,5 @@
 package es.deusto.prog3.cap03.ejemplos;
 
-import java.awt.BorderLayout;
-
 import javax.swing.*;
 
 public class VentanaSencilla {

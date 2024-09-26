@@ -8,7 +8,6 @@ import javax.swing.JButton;
 import javax.swing.JFrame;
 import javax.swing.JPanel;
 import javax.swing.JTextField;
-import javax.swing.SwingUtilities;
 
 // Este ejemplo ha sigo creado a partir de una versión generada con ChatGPT 4o
 public class Calculadora extends JFrame {

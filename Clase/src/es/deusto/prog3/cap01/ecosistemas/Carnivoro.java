@@ -3,6 +3,10 @@ package es.deusto.prog3.cap01.ecosistemas;
 import java.util.ArrayList;
 
 public class Carnivoro extends Animal {
+	/**
+	 * 
+	 */
+	private static final long serialVersionUID = 1L;
 	protected ArrayList<Animal> alimentacion;
 
 	public Carnivoro(String especie, ArrayList<Clima> climas, double edadMin, double edadMax, int reproduccion,
