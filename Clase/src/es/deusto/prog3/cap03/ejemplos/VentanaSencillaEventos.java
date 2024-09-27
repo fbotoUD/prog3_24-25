@@ -3,6 +3,9 @@ package es.deusto.prog3.cap03.ejemplos;
 import java.awt.BorderLayout;
 import java.awt.Font;
 import java.awt.GridLayout;
+import java.awt.event.ActionEvent;
+import java.awt.event.ActionListener;
+
 import javax.swing.*;
 
 public class VentanaSencillaEventos extends JFrame{
@@ -57,8 +60,33 @@ public class VentanaSencillaEventos extends JFrame{
         JButton boton1 = new JButton("Enviar");
         JButton boton2 = new JButton("Salir");
         
+	      //Crear las clases que implementan la interfaz ActionListener
+	      //TODO
+	     
         //Añadir una Action listener para cada botón
         //TODO
+        boton1.addActionListener(new ActionListener() {
+			
+			@Override
+			public void actionPerformed(ActionEvent e) {
+				System.out.println("Enviar a: "+tfMail.getText());
+				JOptionPane.showMessageDialog(VentanaSencillaEventos.this, "Enviar a: "+tfMail.getText());
+				
+			}
+		});
+        
+        boton2.addActionListener(new ActionListener() {
+			
+			@Override
+			public void actionPerformed(ActionEvent e) {
+				int ret = JOptionPane.showConfirmDialog(VentanaSencillaEventos.this, "Salir?");
+				if(ret == 0) {
+					dispose();
+				}
+				
+				
+			}
+		});
         
         JPanel panelBotones = new JPanel();
         panelBotones.setLayout(new GridLayout(1, 2));
@@ -78,5 +106,3 @@ public class VentanaSencillaEventos extends JFrame{
     }
 }
 
-//Crear las clases que implementan la interfaz ActionListener
-//TODO

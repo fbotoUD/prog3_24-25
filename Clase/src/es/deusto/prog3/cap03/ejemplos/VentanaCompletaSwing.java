@@ -3,6 +3,7 @@ package es.deusto.prog3.cap03.ejemplos;
 import javax.swing.JFrame;
 import javax.swing.JButton;
 import javax.swing.JTextField;
+import javax.swing.UIManager;
 import javax.swing.JTextArea;
 import javax.swing.JPanel;
 import javax.swing.JLabel;
@@ -11,21 +12,23 @@ import javax.swing.JScrollPane;
 import javax.swing.JCheckBox;
 import javax.swing.ButtonGroup;
 import java.awt.FlowLayout;
+import java.awt.Font;
 import java.awt.GridLayout;
+import java.util.Enumeration;
 
 /** Ejemplo de ventana compleja en Swing sin eventos (compararla con VentanaAWT2)
  */
 @SuppressWarnings("serial")  // Para evitar el warning de Serializable
 public class VentanaCompletaSwing extends JFrame {
 
-	JPanel JPanelNorte;
-	JPanel JPanelCentral;
-	JPanel JPanelSur;
+	JPanel panelNorte;
+	JPanel panelCentral;
+	JPanel panelSur;
 
-	JPanel JPanelIzquierdo;
-	JPanel JPanelDerecho;
-	JPanel JPanelArriba;
-	JPanel JPanelAbajo;
+	JPanel panelIzquierdo;
+	JPanel panelDerecho;
+	JPanel panelArriba;
+	JPanel panelAbajo;
 
 	JTextField nombre;
 	JTextField direccion;
@@ -54,13 +57,16 @@ public class VentanaCompletaSwing extends JFrame {
 
 	public VentanaCompletaSwing()
 	{
-		JPanelNorte= new JPanel();
-		JPanelCentral = new JPanel();
-		JPanelSur = new JPanel();
-		JPanelIzquierdo = new JPanel();
-		JPanelDerecho = new JPanel();
-		JPanelArriba = new JPanel();
-		JPanelAbajo = new JPanel();
+		Utils.aumentarTamanoFuente(18);
+		setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+		
+		panelNorte= new JPanel();
+		panelCentral = new JPanel();
+		panelSur = new JPanel();
+		panelIzquierdo = new JPanel();
+		panelDerecho = new JPanel();
+		panelArriba = new JPanel();
+		panelAbajo = new JPanel();
 
 		nombre = new JTextField(20);
 		direccion = new JTextField(20);
@@ -100,44 +106,44 @@ public class VentanaCompletaSwing extends JFrame {
 		insertar = new JButton("Insertar Datos");
 		salir = new JButton("Salir");
 	
-		JPanelNorte.add(etiqCabecera);
+		panelNorte.add(etiqCabecera);
 
-		JPanelSur.add(insertar);					
-		JPanelSur.add(salir);					
+		panelSur.add(insertar);					
+		panelSur.add(salir);					
 
-		JPanelIzquierdo.setLayout(new FlowLayout(FlowLayout.LEFT));
-		JPanelIzquierdo.add(etiqNombre);
-		JPanelIzquierdo.add(nombre);
-		JPanelIzquierdo.add(etiqDireccion);
-		JPanelIzquierdo.add(direccion);
-		JPanelIzquierdo.add(etiqTelefono);
-		JPanelIzquierdo.add(telefono);
-		JPanelIzquierdo.add(etiqOtrosDatos);
-		JPanelIzquierdo.add(otrosDatos);
+		panelIzquierdo.setLayout(new FlowLayout(FlowLayout.LEFT));
+		panelIzquierdo.add(etiqNombre);
+		panelIzquierdo.add(nombre);
+		panelIzquierdo.add(etiqDireccion);
+		panelIzquierdo.add(direccion);
+		panelIzquierdo.add(etiqTelefono);
+		panelIzquierdo.add(telefono);
+		panelIzquierdo.add(etiqOtrosDatos);
+		panelIzquierdo.add(otrosDatos);
 
-		JPanelArriba.setLayout(new FlowLayout());
-		JPanelArriba.add(etiqEstudios);
-		JPanelArriba.add(scrollLista);
+		panelArriba.setLayout(new FlowLayout());
+		panelArriba.add(etiqEstudios);
+		panelArriba.add(scrollLista);
 
-		JPanelAbajo.setLayout(new FlowLayout(FlowLayout.LEFT));
-		JPanelAbajo.add(hombre);
-		JPanelAbajo.add(mujer);
-		JPanelAbajo.add(viajar);
-		JPanelAbajo.add(coche);
-		JPanelAbajo.add(mili);
+		panelAbajo.setLayout(new FlowLayout(FlowLayout.LEFT));
+		panelAbajo.add(hombre);
+		panelAbajo.add(mujer);
+		panelAbajo.add(viajar);
+		panelAbajo.add(coche);
+		panelAbajo.add(mili);
 
-		JPanelDerecho.setLayout(new GridLayout(2,1));
-		JPanelDerecho.add(JPanelArriba);		
-		JPanelDerecho.add(JPanelAbajo);
+		panelDerecho.setLayout(new GridLayout(2,1));
+		panelDerecho.add(panelArriba);		
+		panelDerecho.add(panelAbajo);
 
-		JPanelCentral.setLayout(new GridLayout(1,2));
-		JPanelCentral.add(JPanelIzquierdo);
-		JPanelCentral.add(JPanelDerecho);
+		panelCentral.setLayout(new GridLayout(1,2));
+		panelCentral.add(panelIzquierdo);
+		panelCentral.add(panelDerecho);
 
-		this.getContentPane().add(JPanelNorte, "North");		
-		this.getContentPane().add(JPanelSur, "South");		
-		this.getContentPane().add(JPanelCentral, "Center");		
-		this.setSize(450,425);
+		this.getContentPane().add(panelNorte, "North");		
+		this.getContentPane().add(panelSur, "South");		
+		this.getContentPane().add(panelCentral, "Center");		
+		this.setSize(750,725);
 		this.setTitle("Currículum Vitae");
 		this.setVisible(true);
 	}
