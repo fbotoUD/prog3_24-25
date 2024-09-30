@@ -41,8 +41,6 @@ public class EjemploDeVariosComponentes extends JFrame {
 	private JSpinner spinValor;
 	private JTextField tfValor;
 	private JSlider slValor;
-	private JProgressBar pbProgreso;
-	private JButton bProgresa;
 	
 	public EjemploDeVariosComponentes() {
 		Utils.aumentarTamanoFuente(20);
@@ -73,8 +71,6 @@ public class EjemploDeVariosComponentes extends JFrame {
 		slValor = new JSlider( 0, 100 );  // Valores mínimo y máximo del slider
 		tfValor = new JTextField( "0", 5 );
 		spinValor = new JSpinner();
-		bProgresa = new JButton( "Progreso" );
-		pbProgreso = new JProgressBar( 0, 100 );  // Valores mínimo y máximo de la progressbar
  		
 		// 3.- Formato y configuración
 		// Ejemplo de border
@@ -96,9 +92,7 @@ public class EjemploDeVariosComponentes extends JFrame {
 		pInferior.add( spinValor );
 		pInferior.add( slValor );
 		pInferior.add( tfValor );
-		pInferior.add( new JLabel( "Progreso:" ) );
-		pInferior.add( bProgresa );
-		pInferior.add( pbProgreso );
+		
 		// El buttongroup no hay que añadirlo, no es visual, solo funciona su lógica (no se pueden activar 2 botones del mismo buttongroup)
 		getContentPane().add( pBotonera, BorderLayout.WEST );
 		getContentPane().add( spCentral, BorderLayout.CENTER );
@@ -142,32 +136,13 @@ public class EjemploDeVariosComponentes extends JFrame {
 				taEscribeAqui.setSelectionStart( taEscribeAqui.getText().length() );  // Al seleccionar el final del texto, se ve este punto en pantalla aunque el scroll se salga 
 			}
 		});
-		bProgresa.addActionListener( new ActionListener() {
-			@Override
-			public void actionPerformed(ActionEvent e) {
-				taEscribeAqui.append( "Actualizando barra de progreso...\n" );
-				taEscribeAqui.setSelectionStart( taEscribeAqui.getText().length() );  // Al seleccionar el final del texto, se ve este punto en pantalla aunque el scroll se salga 
-				// TODO ¿Por qué esto no funciona? Desde el main sí que funciona
-				for (int i=0; i<100; i++) {
-					pbProgreso.setValue( i );
-					try {
-						Thread.sleep( 20 );
-					} catch (InterruptedException e2) {}
-				}
-			}
-		});
 		menuItem1.addActionListener( new ActionListener() {
 			@Override
 			public void actionPerformed(ActionEvent e) {
 				bgRadios.clearSelection();
 			}
 		});
-		menuItem2.addActionListener( new ActionListener() {
-			@Override
-			public void actionPerformed(ActionEvent e) {
-				pbProgreso.setValue( 0 );
-			}
-		});
+
 		menuItem3.addActionListener( new ActionListener() {
 			@Override
 			public void actionPerformed(ActionEvent e) {
