@@ -3,6 +3,31 @@ package es.deusto.prog3.cap03.ejemplos;
 import javax.swing.*;
 import java.awt.*;
 
+//Clase que representa un elemento personalizado para la lista
+class Persona {
+ private String nombre;
+ private int edad;
+
+ public Persona(String nombre, int edad) {
+     this.nombre = nombre;
+     this.edad = edad;
+ }
+
+ // Sobrescribimos el método toString() para que el texto de cada ítem sea el nombre
+ @Override
+ public String toString() {
+     return nombre + " (" + edad + " años)";
+ }
+
+ public String getNombre() {
+     return nombre;
+ }
+
+ public int getEdad() {
+     return edad;
+ }
+}
+
 public class EjemploJList {
 
     public static void main(String[] args) {
