@@ -1,9 +1,12 @@
-package es.deusto.prog3.cap03.ejemplos;
+package es.deusto.prog3.cap03.resueltos;
 
 import javax.swing.JFrame;
 import javax.swing.JButton;
 import javax.swing.JTextField;
 import javax.swing.UIManager;
+
+import es.deusto.prog3.cap03.ejemplos.Utils;
+
 import javax.swing.JTextArea;
 import javax.swing.JPanel;
 import javax.swing.JLabel;
