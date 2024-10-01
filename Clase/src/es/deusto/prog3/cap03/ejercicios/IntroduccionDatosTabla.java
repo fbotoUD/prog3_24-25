@@ -8,14 +8,16 @@ import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 
 
-/*
+/**
  * Programa una clase en Java que muestre unos de tatos en una tabla
  * y un botón añada una nueva entrada a los datos.
  * Haz que los nuevos datos se cojan de dos JTextField
  * Modifica el modelo para que:
-        1- No se pueda modificar la columna nombre
-        2- La columna edad solo acepte enteros
-        3- No se acepten edades mayores de 105
+ * 1- No se pueda modificar la columna nombre
+ * 2- La columna edad solo acepte enteros
+ * 3- No se acepten edades mayores de 105
+ * 
+ * Modifica el render y el editor añadiendo un JSpiner para modificar la edad
  */
 
 public class IntroduccionDatosTabla {
