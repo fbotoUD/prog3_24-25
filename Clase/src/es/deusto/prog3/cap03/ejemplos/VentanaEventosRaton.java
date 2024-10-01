@@ -79,9 +79,10 @@ public class VentanaEventosRaton extends JFrame {
 		//TODO sacarMensaje al soltar
 		//TODO sacarMensaje y mover el Sonic al hacer click
 		
-		//Añadir MouseMotionListener
+		//Añadir MouseMotionListener a pCentral
 		//TODO sacarMensaje cuando hay movimiento de ratón
 		//TODO sacarMensaje y mover el Sonic al hacer Drag del ratón
+		
 	}
 	
 	private void sacarMensaje(String nombre, MouseEvent e, JTextArea ta) {

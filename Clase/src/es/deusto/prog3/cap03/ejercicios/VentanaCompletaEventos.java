@@ -1,4 +1,4 @@
-package es.deusto.prog3.cap03.resueltos;
+package es.deusto.prog3.cap03.ejercicios;
 
 import javax.swing.JFrame;
 import javax.swing.JButton;
@@ -18,18 +18,16 @@ import javax.swing.JScrollPane;
 import javax.swing.JCheckBox;
 import javax.swing.ButtonGroup;
 import java.awt.FlowLayout;
-import java.awt.Font;
 import java.awt.GridLayout;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 import java.awt.event.ItemEvent;
 import java.awt.event.ItemListener;
-import java.util.Enumeration;
 
 /** Ejemplo de ventana compleja en Swing sin eventos (compararla con VentanaAWT2)
  */
 @SuppressWarnings("serial")  // Para evitar el warning de Serializable
-public class VentanaCompletaSwing extends JFrame {
+public class VentanaCompletaEventos extends JFrame {
 
 	JPanel panelNorte;
 	JPanel panelCentral;
@@ -65,7 +63,7 @@ public class VentanaCompletaSwing extends JFrame {
 	JButton insertar;
 	JButton salir;
 
-	public VentanaCompletaSwing()
+	public VentanaCompletaEventos()
 	{
 		Utils.aumentarTamanoFuente(18);
 		setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
@@ -154,12 +152,35 @@ public class VentanaCompletaSwing extends JFrame {
 		this.getContentPane().add(panelSur, "South");		
 		this.getContentPane().add(panelCentral, "Center");		
 		this.setSize(750,725);
-		this.setTitle("Currículum Vitae");		
+		this.setTitle("Currículum Vitae");
+		
+		/**
+		 * Escuchadores
+		 */
+		
+		//ActionListener al botón insertar para sacar los datos por consola.
+		// Saca un mensaje con un JOptionPane de confirmación.
+		//TODO
+		
+		
+		//Añade ActionListener al botón salir para salir de la aplicación
+		//TODO
+		
+		
+		//Añade un ItemListener al JCheckBox viajar para comprobar que se ha modificado
+		//TODO
+		
+		
+		//Añade un ListSelectionListener al JList estudios sacando por consola
+		//cuando hay un cambio
+		//TODO
+		
+		
 		this.setVisible(true);
 	}
 
 	public static void main(String[] args)
 	{
-		new VentanaCompletaSwing();
+		new VentanaCompletaEventos();
 	}
 }
