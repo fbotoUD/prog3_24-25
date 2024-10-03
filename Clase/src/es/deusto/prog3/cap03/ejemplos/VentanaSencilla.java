@@ -14,7 +14,8 @@ public class VentanaSencilla {
     	JFrame ventana = new JFrame();
     	// Configuración de la ventana
     	ventana.setTitle("Envío de Correo Electrónico");
-    	ventana.setSize(400, 200);
+    	ventana.setSize(200, 200);
+	ventana.setMaximumSize(new Dimension(500,500));
     	ventana.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
 
     	// Crear el panel
