@@ -1,5 +1,7 @@
 package es.deusto.prog3.cap03.ejemplos;
 
+import java.awt.Dimension;
+
 import javax.swing.*;
 
 public class VentanaSencilla {
@@ -16,6 +18,8 @@ public class VentanaSencilla {
     	ventana.setTitle("Envío de Correo Electrónico");
     	ventana.setSize(400, 200);
     	ventana.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+    	
+    	ventana.setMaximumSize(new Dimension(1000,1000));
 
     	// Crear el panel
         JPanel panel = new JPanel();
