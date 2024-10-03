@@ -16,7 +16,7 @@ public class VentanaSencilla {
     	JFrame ventana = new JFrame();
     	// Configuración de la ventana
     	ventana.setTitle("Envío de Correo Electrónico");
-    	ventana.setSize(400, 200);
+    	ventana.setSize(700, 500);
     	ventana.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
     	
     	ventana.setMaximumSize(new Dimension(1000,1000));
