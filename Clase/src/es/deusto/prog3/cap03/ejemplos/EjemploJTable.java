@@ -48,6 +48,7 @@ public class EjemploJTable {
 		modelo.addRow(new Object[] {"Mara",500});
 		modelo.addRow(new Object[] {"Oihan",250});
 		
+		
 		//Anchura columnas (es visual está en la tabla, no en el modelo)
 		tabla.getColumnModel().getColumn(0).setPreferredWidth(200);
 		tabla.getColumnModel().getColumn(0).setMaxWidth(300);
@@ -58,7 +59,40 @@ public class EjemploJTable {
 		 * Modificar Modelos de datos
 		 */
 		// Crear un modelo de datos particular para esta tabla
-		//TODO	
+		//TODO
+		modelo = new DefaultTableModel(new Object[] {"Name","Cod"},0) {
+			@Override
+			public boolean isCellEditable(int row, int column) {
+				if(column==0) return false;
+				return super.isCellEditable(row, column);
+			}
+			
+			@Override
+			public Object getValueAt(int row, int column) {
+				System.out.println("getValueAt: "+row+","+column);
+				return super.getValueAt(row, column);
+			}
+			@Override
+			public void setValueAt(Object aValue, int row, int column) {
+				// TODO Auto-generated method stub
+				if(column == 0) {
+					super.setValueAt(aValue, row, column);
+				}else {
+					try {
+						int valor = Integer.parseInt(aValue+"");
+						if(valor <=255) {
+							super.setValueAt(aValue, row, column);
+						}
+					}catch (Exception e) {
+						e.printStackTrace();
+					}
+				}
+			}
+		};
+		tabla.setModel(modelo);
+		modelo.addRow(new Object[] {"Miren",70});
+		modelo.addRow(new Object[] {"Mara",200});
+		modelo.addRow(new Object[] {"Oihan",250});
 		
 		/**
 		 * Modificar el renderer de la tabla (DefaultTableCellRenderer)
@@ -66,14 +100,29 @@ public class EjemploJTable {
 		//Puedes cambiar los colores (setBackground)
 		//Poner un JSlider en la columna 1
 		//TODO
+		tabla.setDefaultRenderer(Object.class, new DefaultTableCellRenderer() {
+
+			@Override
+			public Component getTableCellRendererComponent(JTable table, Object value, boolean isSelected,
+					boolean hasFocus, int row, int column) {
+				Component compo = super.getTableCellRendererComponent(table, value, isSelected, hasFocus, row, column);
+				System.out.println("Soy un JLabel?"+(compo instanceof JLabel));
+				//Añadido
+				if(column==0) {
+					compo.setBackground(Color.GRAY);
+				}else {
+					compo.setBackground(Color.WHITE);					
+				}
+				return compo;
+			}			
+		});
 		
 		
 		/**
-		 * Modificar el editor para poder actuar con el JSliderv(DefaultCellEditor)
+		 * Modificar el editor para poder actuar con el JSlider(DefaultCellEditor)
 		 */
 		//Es necesario añadir un escuchador al JSlider
-		//TODO
-		
+		//TODO		
 				
 		
 		vent.setVisible(true);
