@@ -10,28 +10,29 @@ public class EjemploLambda1 {
 	private static JButton boton;
 	public static void creaVentana() {
 		ventana = new JFrame();
+		ventana.setSize(200, 200);
 		boton = new JButton();
 		ventana.add( boton );
 		boton.addActionListener( 
-//			new ActionListener() {
-//				@Override
-//				public void actionPerformed(ActionEvent e) {
-//					System.out.println( e.getWhen() );
-//				}
-//			}
-			(e) -> { System.out.println( e.getWhen() );}
+			new ActionListener() {
+				@Override
+				public void actionPerformed(ActionEvent e) {
+					System.out.println( e.getWhen() );
+				}
+			}
+//			(e) -> { System.out.println( e.getWhen() );}
 		);
 		ventana.setVisible( true );
 	}
 	public static void main(String[] args) {
 		// ...
 		SwingUtilities.invokeLater(
-//				new Runnable() {
-//					public void run() {
-//						creaVentana();
-//					}
-//				}
-				 () -> { creaVentana(); }  // Interfaz
+				new Runnable() {
+					public void run() {
+						creaVentana();
+					}
+				}
+//				 () -> { creaVentana(); }  // Interfaz
 //				EjemploLambda1::creaVentana
 		);
 	}
