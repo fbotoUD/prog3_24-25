@@ -37,7 +37,7 @@ public class EjemploLambda1 {
 			System.out.println(n);
 		}
         // Expresión lambda para imprimir cada número
-//        numbers.forEach(number -> System.out.println(number));
+        numbers.forEach(number -> System.out.println(number));
 	}
 	public static void main(String[] args) {
 		// ...
