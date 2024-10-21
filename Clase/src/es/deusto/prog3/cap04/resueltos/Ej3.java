@@ -31,7 +31,7 @@ public class Ej3 {
         hilo.start();
 
         // Hilo principal que cuenta desde 10 hasta 0
-        for (int i = 10; i >= 0; i--) {
+        for (int i = 5; i >= 0; i--) {
             System.out.println("Hilo principal: " + i);
             try {
 				Thread.sleep(500);
