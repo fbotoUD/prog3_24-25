@@ -3,7 +3,7 @@ package es.deusto.prog3.cap04.ejemplos;
 import java.util.stream.LongStream;
 
 /**
- * En este ejemplo se realiza se paraleliza la tarea de sumar los números de 1 a
+ * En este ejemplo se paraleliza la tarea de sumar los números de 1 a
  * 1_000_000_000 pero el proceso se hace utilizando el API de streams de Java.
  * Usa esta configuración para lanzar el programa y ver cómo le afecta el número
  * de threads disponibles para la tarea paralela: 
