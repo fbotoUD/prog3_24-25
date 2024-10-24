@@ -4,7 +4,7 @@ package es.deusto.prog3.cap04.ejercicios;
  * Supongamos que tienes un programa que simula la gestión de una cuenta bancaria compartida entre varios hilos.
  * La cuenta bancaria tiene un saldo inicial de 1000 euros. 
  * Programa dos hilos que intenten realizar depósitos y retiradas de dinero simultáneamente en la cuenta.
- * A la hora depositar o retirar dinero simula una verificación del saldo antes de modificar y actualiza el saldo verificado
+ * A la hora depositar o retirar dinero simula una verificación del saldo (un proceso que tarda 1s) antes de modificar y actualiza el saldo verificado
  * Esto te permitirá ver que hay un problema
  * Es importante que la cuenta se maneje de manera segura para evitar que varios hilos accedan al saldo de la cuenta al mismo tiempo y generen inconsistencias.
  * Implementa un programa que utilice el bloque synchronized para garantizar la concurrencia segura en la gestión de la cuenta bancaria.
