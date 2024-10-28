@@ -109,6 +109,15 @@ public class VentanaEventosRatonCompleto extends JFrame {
 				// sin embargo el atributo seguirá existiendo)
 			}
 		});
+		
+		//Con la clase abstracta MouseAdapter
+//		pCentral.addMouseListener(new MouseAdapter() {
+//			@Override
+//			public void mouseClicked(MouseEvent e) {
+//				sacarMensaje( "mouseClicked", e, taTextoIzq );
+//				lFoto.setLocation( e.getX()-lFoto.getWidth()/2, e.getY()-lFoto.getHeight()/2 );
+//			}
+//		});
 		pCentral.addMouseMotionListener( new MouseMotionListener() {
 			@Override
 			public void mouseMoved(MouseEvent e) {
@@ -121,6 +130,14 @@ public class VentanaEventosRatonCompleto extends JFrame {
 				lFoto.setLocation( e.getX()-lFoto.getWidth()/2, e.getY()-lFoto.getHeight()/2 );
 			}
 		});
+		//Con MouseMotionAdapter
+//		pCentral.addMouseMotionListener(new MouseMotionAdapter() {
+//			@Override
+//			public void mouseDragged(MouseEvent e) {
+//				sacarMensaje( "mouseDragged", e, taTextoDer );
+//				lFoto.setLocation( e.getX()-lFoto.getWidth()/2, e.getY()-lFoto.getHeight()/2 );
+//			}
+//		});
 		// Final
 	}
 	

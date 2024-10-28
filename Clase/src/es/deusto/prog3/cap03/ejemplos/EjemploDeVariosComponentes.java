@@ -12,7 +12,6 @@ import javax.swing.event.ChangeListener;
  * ButtonGroup y RadioButton
  * JSpinner
  * JSlider
- * JProgressBar
  * setPreferredSize
  * Menús
  * @author andoni.eguiluz at deusto.es
