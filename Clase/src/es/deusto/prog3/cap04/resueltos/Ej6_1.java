@@ -10,8 +10,7 @@ package es.deusto.prog3.cap04.resueltos;
  */
 public class Ej6_1 {
 
-	//El resultado se deja en la misma variable, pero no es un acceso concurrente
-	//porque cada long tiene su lugar en la memoria
+	//El resultado se deja en la misma variable, hay que controlar el acceso concurrente
 	static long resultado = 0;
 	static Thread[] hilos = new Thread[4];
 	
