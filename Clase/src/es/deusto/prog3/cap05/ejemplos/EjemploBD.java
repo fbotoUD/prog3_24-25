@@ -33,6 +33,8 @@ public class EjemploBD {
 			res = statement.executeUpdate("insert into person values(2, 'yui')");
 			System.out.println( "Número de registros insertados: "+res );
 			
+			//TODO añade otro registro
+			
 			// Ejecutar sentencias SQL (Select)
 			ResultSet rs = statement.executeQuery("select * from person");
 			while(rs.next()) {

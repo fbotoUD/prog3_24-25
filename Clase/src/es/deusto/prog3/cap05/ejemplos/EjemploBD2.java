@@ -6,6 +6,7 @@ import java.sql.*;
  * Ejemplo de cómo usar PreparedStatement
  */
 
+//TODO ¿Cómo harías para que el ejemplo funcionara a partir de la segunda ejecución?
 public class EjemploBD2 {
 	
 	private Connection conn = null;
@@ -65,7 +66,7 @@ public class EjemploBD2 {
         	Statement stmt = conn.createStatement();
 			stmt.execute(createTableSQL);
 		} catch (SQLException e) {
-			System.err.println("Error al crear la tabla");
+			System.err.println("Error al crear la tabla "+e);
 		}
         System.out.println("Tabla creada.");
 		
@@ -83,7 +84,7 @@ public class EjemploBD2 {
             }
             System.out.println("Registros insertados.");
         } catch (SQLException e) {
-			System.err.println("Error al insertar registros");
+			System.err.println("Error al insertar registros "+e);
 		}
 	}
 	
