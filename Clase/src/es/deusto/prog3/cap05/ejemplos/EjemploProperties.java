@@ -50,8 +50,9 @@ public class EjemploProperties {
         FileInputStream inputStream = null;
 
         try {
+        	inputStream = new FileInputStream("config.properties");
             // Cargar las propiedades desde el archivo
-            properties.load(new FileInputStream("config.properties"));
+            properties.load(inputStream);
 
             // Obtener y mostrar propiedades desde .properties 
             String nombre = properties.getProperty("nombre");
