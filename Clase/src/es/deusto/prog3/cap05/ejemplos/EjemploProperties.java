@@ -29,7 +29,7 @@ public class EjemploProperties {
             // Escribir las propiedades en un archivo
             outputStream = new FileOutputStream("config.properties");
             properties.store(outputStream, "Configuración de Ejemplo");
-            properties.storeToXML(new PrintStream( "config.xml" ), "Ejemplo propiedades" );
+            properties.storeToXML(new FileOutputStream( "config.xml" ), "Ejemplo propiedades" );
 
             System.out.println("Propiedades escritas correctamente en el archivo.");
         } catch (IOException e) {
