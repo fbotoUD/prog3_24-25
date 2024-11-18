@@ -3,7 +3,7 @@ package es.deusto.prog3.cap06.ejemplos;
 public class MaximoComunDivisor {
 
 	/**
-	 * Calcula el máximo común divisor de dos números.
+	 * Calcula el máximo común divisor de dos números. Una versión del método de Euclides
 	 * @param n long con el priemr número.
 	 * @param m long con el segundo número.
 	 * @return long con el número más grande entre el que que son
